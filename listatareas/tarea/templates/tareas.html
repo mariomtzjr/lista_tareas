@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrastyles %}
+	<script src="{% url '/static/tarea/js/line_through.js' %}"></script>
+{% endblock%}
+{% block content %}
+	{% if request.path == '/tarea/' %}
+		<div class="container">
+			<div class="row">
+				<h1>Lista de tareas</h1>
+				<input class="form-control form-control-lg input-tarea-codigo" type="text" placeholder="Código de tarea">
+				<input class="form-control form-control-lg input-tarea-descripcion" type="text" placeholder="Escribe una tarea aquí">
+				<button type="button" class="btn btn-primary btn-agregar-tarea">Agregar tarea</button>
+				<div class="contenedor-lista">
+					<table class="table">
+						<thead>
+							<tr class="tabla-titulo">
+								<th scope="col">Tarea</th>
+								<th scope="col" class="descripcion-tarea">Descripción</th>
+								<th scope="col" class="accion-tarea">Acción</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td class="descripcion" id="tarea_descripcion">Ajustar el Log de Django para que muestre los errores en STDOUT para AWS cloudwatch</td>
+								<td><a href="" class="tarea-link" onclick="line_through()"><i class="fas fa-check-circle fa-2x"></i></a><a href="" class="tarea-link"><i class="fas fa-times-circle fa-2x"></i></a></td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+{% endif %}
+{% endblock %}

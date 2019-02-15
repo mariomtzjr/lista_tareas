@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+	{% if request.path == '/tarea/crear/' %}
+		<div class="container">
+			<div class="row">
+				<h1>Crear nueva tarea</h1>
+				<div class="contenedor-lista">
+					<form method="POST">
+						{% csrf_token %}
+						<div class="input-tarea-codigo">
+							{{form.codigo}}
+						</div>
+							{{form.codigo.errors}}
+						<div class="input-tarea-descripcion">
+							{{form.descripcion}}
+						</div>
+							{{form.descripcion.errors}}
+						
+						<button type="submit" class="btn btn-primary btn-agregar-tarea">Agregar tarea
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}
+{% endblock %}

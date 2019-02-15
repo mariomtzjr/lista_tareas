@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	{% if request.path == '/tarea/' %}
+		<div class="container">
+			<div class="row">
+				<h1>Lista de tareas</h1>
+				<div class="contenedor-lista">
+					<table class="table">
+						<thead class="tabla-titulo">
+							<tr>
+								<th scope="col" class="tarea-id text-center">Id</th>
+								<th scope="col" class="tarea-codigo-title">Código tarea</th>
+								<th scope="col" class="descripcion-tarea">Descripción</th>
+								<th scope="col" class="accion-tarea">Acción</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for tarea in object_list %}
+								<tr>
+									<th scope="row" class="text-center"> {{ tarea.id }}</th>
+									<td>{{ tarea.codigo }}</td>
+									{% if not tarea.estado %} 
+										<td class="text-left" id="tarea_descripcion">{{ tarea.descripcion }}</td>
+									{% else %}
+										<td class="text-left" style="text-decoration: line-through" id="tarea_descripcion">{{ tarea.descripcion }}</td>
+									{% endif %}
+									<td class="accion-item">
+										<a href="{% url 'tarea-done' tarea.id %}" class="accion-link">
+											{%if tarea.estado == False%}<i class="fas fa-thumbs-up fa-2x"></i> {%else%}<i class="fas fa-thumbs-down fa-2x"></i>{% endif %}
+										</a>
+										<a href="{% url 'tarea_eliminar' tarea.id %}" class="accion-link-borrar">
+											<i class="fas fa-minus-square"></i>
+										</a>
+									</td>
+									{% empty %}
+									<div class="display-4 no-tareas">No hay tareas</div>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}
+{% endblock %}

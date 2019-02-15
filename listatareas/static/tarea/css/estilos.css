@@ -1,0 +1,185 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+a {
+    color: #FFF;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #18BC9C;
+}
+
+.btn-item:hover{
+    color: #18BC9C;
+}
+
+/* Estilos propios*/
+
+.navbar{
+    height: 80px;
+}
+
+.navbar-brand{
+    padding-top: 10px;
+}
+
+.dropdown-menu.show {
+    margin-left: 130px;
+}
+
+.logo{
+    height: 45px;
+    width: 140px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.container .row{
+    width: 100%;
+}
+
+.container .row h1{
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.input-tarea-codigo{
+    width: 13%;
+}
+
+.tarea-codigo{
+    font-size: 16px;
+}
+
+.input-tarea-descripcion{
+    margin: 0 10px;
+    width: 70%;
+}
+
+.tarea-descripcion{
+    font-size: 16px;
+}
+
+.btn-agregar-tarea{
+    height: 46px;
+    width: 15%;
+}
+
+.btn-agregar-tarea:hover{
+    color: #18BC9C;
+}
+
+.contenedor-lista{
+    margin: 30px 0px;
+    width: 100%;
+}
+
+.contenedor-lista form{
+    display: flex;
+}
+
+.contener-lista form.form_eliminar{
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lista-tareas{
+    width: 100%;
+}
+
+.tabla-titulo{
+    background-color: #18BC9C;
+}
+
+.table{
+    margin-top: 30px;
+}
+
+.table td{
+    text-align: center;
+}
+
+.table td.descripcion{
+    text-align: left;
+}
+
+.tarea-id{
+    width: 5%;
+}
+
+.tarea-codigo-title{
+    width: 11%;
+}
+
+.descripcion-tarea{
+    width: 70%;
+}
+
+.accion-tarea{
+    text-align: center;
+}
+
+.tarea-link,
+.accion-link,
+.accion-link-borrar{
+    color: #2C3E50;
+}
+
+.tarea-link:hover{
+    color: #18BC9C; 
+}
+
+.accion-link-borrar:hover{
+    color: red;
+}
+
+.fa-times-circle{
+    margin-left: 20px;
+}
+
+.no-tareas{
+    display: flex;
+    margin: 60px;
+    justify-content: center;
+}
+
+.fa-thumbs-up,
+.fa-minus-square,
+.fa-thumbs-down{
+    font-size: 22px;
+}
+
+.accion-item{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}

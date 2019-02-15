@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<h1>Lista de tareas</h1>
+			<div class="contenedor-lista">
+				<form method="post" class="form_eliminar">{% csrf_token %}
+					<h1>¿Estás seguro de querer eliminar la tarea {{ tarea.codigo }}?</h1>
+					<input type="submit" value="Sí, eliminar" class="btn btn-danger">
+				</form>
+				<a href="{% url 'tarea_listar' %}"><button class="btn btn-primary"> No, regresar</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
